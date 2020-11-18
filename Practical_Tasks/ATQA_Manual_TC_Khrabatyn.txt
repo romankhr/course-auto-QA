@@ -1,0 +1,27 @@
+Test Scenario (use case)
+
+1) User can navigate through the news of the site by using the mouse scroll
+2) User can use the search on the site 
+3) User can leave feedback
+4) User can use the site by using any browser
+5) User can open any news
+
+
+Test cases (2) User can use the search on the site 
+
+Searching by word
+1)Open browser -> Go to the webpage ->Push the button "Search" -> Insert searched word -> See result -> expected news should be appeared
+
+Searching by date
+2)Open browser -> Go to the webpage ->Push the button "Search" -> Insert necessary date -> See result -> expected news of the chosen date should appear
+
+Use "Search" from different pages
+3)Open browser -> Go to the webpage -> Go to any page (Crime) -> Push the button "Search" -> Insert necessary word -> see result->expected news shoud be appered
+
+Use "Search" from different browsers
+4)
+Open browser -> Go to the webpage -> Go to any page (Crime) -> Push the button "Search" -> Insert necessary word -> see result->expected news shoud be appered
+
+Searching by word and date
+5)
+Open browser -> Go to the webpage ->Push the button "Search" -> Insert searched word and date ->see result ->expected news from the chosen date shoud be appered

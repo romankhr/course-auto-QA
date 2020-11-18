@@ -1,0 +1,65 @@
+1)
+Name: Bug-An advertisement influences the context of the website
+
+Summary: When users open webpages of the website and a block of advertisement shift context.
+
+Steps to reproduce:
+Open browser
+Go to the webpage
+Click any buttom on the head (Економіка, Кримінал, Культура, Політика,Влада, Суспільство)
+In the left upper corner, the block of an advertisement shifts words of the context.
+
+Expected result: 
+Advertisements should not influence the main context.
+
+Environment:
+Browser Chrom
+
+2)
+Name: Bug-The buttons don't active
+
+Summary: The green buttons don't active and don't function
+
+Steps to reproduce:
+Open browser
+Go to the webpage
+Click any buttom on the head (Економіка, Кримінал, Культура, Політика,Влада, Суспільство)
+The three green buttons on the right under the head block don't active and don't function
+
+Expected result:
+By clicking on the buttons should open pages on Facebook, Instagram, or Twitter in accordance
+
+Environment:
+Browser Chrom, Opera
+
+3)
+Name: Bug-The link doesn't function
+
+Summary: At the top of the page, the link Статті doesn't work
+
+Steps to reproduce:
+Open browser
+Go to the webpage
+Click on the link Статті on the top of the webpage. Nothing happens.
+
+Expected result:
+By clicking on the link should open a page.
+
+Environment:
+Browser Chrom, Opera
+
+4)
+Name: Bug-The inscription on the banner is poorly displayed.
+
+Summary: The inscription "подробности" on the banner "Pravda.IF.UA" is not seen fully.
+
+Steps to reproduce:
+Open a browser
+Go to the webpage
+Scroll a little bit down. On the right side, you will see bunner "Pravda.IF.UA". Inside of such box, the inscription "подробности" displays in the wrong way (not full).
+
+Expected result:
+The inscription "подробности" on the banner "Pravda.IF.UA" should be seen in a proper way.
+
+Environment:
+Browser Chrom, Opera
