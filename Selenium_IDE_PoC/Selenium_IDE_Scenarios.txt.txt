@@ -1,0 +1,115 @@
+Test cases for testing webpage www.zoopla.co.uk
+
+Searching by location
+1)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Push the button "Search"->
+The information about the properties of choosen location should appeared
+
+Searching by minimum price
+2)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Choose Minimum price in field "Min prise" ->
+Push the button "Search"->
+The information about the properties that have price bigger of choosen minimum should appeared
+
+Searching by maximum price
+3)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk-> 
+Insert location in the location field -> 
+Choose Maximum price in field "Max prise" ->
+Push the button "Search"->
+The information about the properties that have price less of choosen maximum should appeared
+
+Searching by Property type
+4)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Choose Property type in field "Property type" ->
+Push the button "Search"->
+The information about the properties of choosen Property type should appeared
+
+Searching by numbers of bedrooms
+5)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Choose number of bedrooms in field "Bedrooms" ->
+Push the button "Search"->
+The information about the properties of choosen numbers of bedrooms should appeared
+
+Searching by location, boundary price, property tipe, number of bedrooms
+6)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Choose Minimum price in field "Min prise" ->
+Choose Maximum price in field "Max prise" ->
+Choose Property type in field "Property type" ->
+Choose number of bedrooms in field "Bedrooms" ->
+Push the button "Search"->
+The information about the properties of choosen conditions should appeared
+
+Searching by location, boundary price, property tipe, number of bedrooms and sorting in ascending order
+7)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Choose Minimum price in field "Min prise" ->
+Choose Maximum price in field "Max prise" ->
+Choose Property type in field "Property type" ->
+Choose number of bedrooms in field "Bedrooms" ->
+Push the button "Search"->
+Choose sorting option "Lowest price" ->
+The information about the properties of choosen conditions should appeared and sorted in ascending order 
+
+Searching by location, boundary price, property tipe, number of bedrooms and sorting in descending order
+8)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Insert location in the location field -> 
+Choose Minimum price in field "Min prise" ->
+Choose Maximum price in field "Max prise" ->
+Choose Property type in field "Property type" ->
+Choose number of bedrooms in field "Bedrooms" ->
+Push the button "Search"->
+Choose sorting option "Highest price" ->
+The information about the properties of choosen conditions should appeared and sorted in descending order 
+
+Advance searching by location, boundary price, property tipe, number of bedrooms and sorting in descending order
+9)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Tap "Advanced search options" ->
+Insert location in the location field -> 
+Choose Minimum price in field "Min prise" ->
+Choose Maximum price in field "Max prise" ->
+Choose Property type in field "Property type" ->
+Choose number of bedrooms in field "Bedrooms" ->
+Choose "Distance from location" ->
+Choose in "Added" option "Last 3 days" ->
+Choose sorting option "Sorted by" value "Highest price"->
+Push the button "Search"->
+The information about the properties of choosen conditions should appeared and sorted in descending order 
+
+Advance searching by location, boundary price, property tipe, number of bedrooms and sorting in ascending order
+10)
+Open browser -> 
+Go to the webpage www.zoopla.co.uk->
+Tap "Advanced search options" ->
+Insert location in the location field -> 
+Choose Minimum price in field "Min prise" ->
+Choose Maximum price in field "Max prise" ->
+Choose Property type in field "Property type" ->
+Choose number of bedrooms in field "Bedrooms" ->
+Choose "Distance from location" ->
+Choose in "Added" option "Last 7 days" ->
+Choose sorting option "Sorted by" value "Lowest price" ->
+Push the button "Search"->
+The information about the properties of choosen conditions should appeared and sorted in ascending order 
