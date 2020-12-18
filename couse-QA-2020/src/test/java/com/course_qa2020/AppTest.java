@@ -1,4 +1,4 @@
-package com.course-qa2020;
+package com.course_qa2020;
 
 import static org.junit.Assert.assertTrue;
 
