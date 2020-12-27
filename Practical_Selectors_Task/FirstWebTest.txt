@@ -1,0 +1,1 @@
+https://github.com/romankhr/course-auto-QA/tree/master/couse-QA-2020/src/test/java/course

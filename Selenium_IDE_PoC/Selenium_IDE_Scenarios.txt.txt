@@ -2,114 +2,276 @@ Test cases for testing webpage www.zoopla.co.uk
 
 Searching by location
 1)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
-Push the button "Search"->
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties of choosen location should appeared
 
 Searching by minimum price
 2)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose Minimum price in field "Min prise" ->
-Push the button "Search"->
+	XPATH -> //select[@id='forsale_price_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
+	CSS -> #forsale_price_min
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties that have price bigger of choosen minimum should appeared
 
 Searching by maximum price
 3)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk-> 
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk-> 
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose Maximum price in field "Max prise" ->
-Push the button "Search"->
+	XPATH -> //select[@id='forsale_price_max']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-max search-attr-for-sale']//select
+	CSS -> #forsale_price_max
+Push the button "Search"->  
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties that have price less of choosen maximum should appeared
 
 Searching by Property type
 4)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose Property type in field "Property type" ->
-Push the button "Search"->
+	XPATH -> //select[@id='property_type']
+	XPATH -> //div[@class='search-attributes-col']//select
+	CSS -> #property_type
+Push the button "Search"->  
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties of choosen Property type should appeared
 
 Searching by numbers of bedrooms
 5)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose number of bedrooms in field "Bedrooms" ->
-Push the button "Search"->
+	XPATH -> //select[@id='beds_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-right']//select
+	CSS -> #beds_min
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties of choosen numbers of bedrooms should appeared
 
 Searching by location, boundary price, property tipe, number of bedrooms
 6)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose Minimum price in field "Min prise" ->
+	XPATH -> //select[@id='forsale_price_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
+	CSS -> #forsale_price_min
 Choose Maximum price in field "Max prise" ->
+	XPATH -> //select[@id='forsale_price_max']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-max search-attr-for-sale']//select
+	CSS -> #forsale_price_max
 Choose Property type in field "Property type" ->
+	XPATH -> //select[@id='property_type']
+	XPATH -> //div[@class='search-attributes-col']//select
+	CSS -> #property_type
 Choose number of bedrooms in field "Bedrooms" ->
-Push the button "Search"->
+	XPATH -> //select[@id='beds_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-right']//select
+	CSS -> #beds_min
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties of choosen conditions should appeared
 
 Searching by location, boundary price, property tipe, number of bedrooms and sorting in ascending order
 7)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose Minimum price in field "Min prise" ->
+	XPATH -> //select[@id='forsale_price_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
+	CSS -> #forsale_price_min
 Choose Maximum price in field "Max prise" ->
+	XPATH -> //select[@id='forsale_price_max']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-max search-attr-for-sale']//select
+	CSS -> #forsale_price_max
 Choose Property type in field "Property type" ->
+	XPATH -> //select[@id='property_type']
+	XPATH -> //div[@class='search-attributes-col']//select
+	CSS -> #property_type
 Choose number of bedrooms in field "Bedrooms" ->
-Push the button "Search"->
+	XPATH -> //select[@id='beds_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-right']//select
+	CSS -> #beds_min
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 Choose sorting option "Lowest price" ->
+	XPATH -> //select[@id='sort-order-dropdown']//option[text()='Lowest price']
+	XPATH -> //div[@class='css-e8hwyq egjkayq4']//select//option[text()='Lowest price']
+	CSS -> #sort-order-dropdown
 The information about the properties of choosen conditions should appeared and sorted in ascending order 
 
 Searching by location, boundary price, property tipe, number of bedrooms and sorting in descending order
 8)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Insert location in the location field -> 
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Choose Minimum price in field "Min prise" ->
+	XPATH -> //select[@id='forsale_price_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
+	CSS -> #forsale_price_min
 Choose Maximum price in field "Max prise" ->
+	XPATH -> //select[@id='forsale_price_max']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-max search-attr-for-sale']//select
+	CSS -> #forsale_price_max
 Choose Property type in field "Property type" ->
+	XPATH -> //select[@id='property_type']
+	XPATH -> //div[@class='search-attributes-col']//select
+	CSS -> #property_type
 Choose number of bedrooms in field "Bedrooms" ->
-Push the button "Search"->
+	XPATH -> //select[@id='beds_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-right']//select
+	CSS -> #beds_min
+Push the button "Search"->  
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 Choose sorting option "Highest price" ->
+	XPATH -> //select[@id='sort-order-dropdown']//option[text()='Highest price']
+	XPATH -> //div[@class='css-e8hwyq egjkayq4']//select//option[text()='Highest price']
+	CSS -> #sort-order-dropdown
 The information about the properties of choosen conditions should appeared and sorted in descending order 
 
 Advance searching by location, boundary price, property tipe, number of bedrooms and sorting in descending order
 9)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Tap "Advanced search options" ->
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Insert location in the location field -> 
-Choose Minimum price in field "Min prise" ->
-Choose Maximum price in field "Max prise" ->
+	XPATH -> //input[@class='geo_autocomplete_identifier']/span[text()='Please enter a location'] 
+  	XPATH -> //input[@class='geo_autocomplete_identifier']
+	CSS -> .search-input-location-placeholder-1
+Choose Minimum price in field "Min prise" -> XPATH -> 
+	XPATH -> //select[@id='forsale_price_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
+	CSS -> #forsale_price_min
+Choose Maximum price in field "Max prise" -> XPATH ->
+	XPATH -> //select[@id='forsale_price_max']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-max search-attr-for-sale']//select
+	CSS -> #forsale_price_max
 Choose Property type in field "Property type" ->
-Choose number of bedrooms in field "Bedrooms" ->
-Choose "Distance from location" ->
-Choose in "Added" option "Last 3 days" ->
-Choose sorting option "Sorted by" value "Highest price"->
-Push the button "Search"->
+	XPATH -> //select[@id='property_type']
+	XPATH -> //div[@class='search-attributes-col']//select
+	CSS -> #property_type
+Choose number of bedrooms in field "Bedrooms" -> 
+	XPATH -> //select[@id='beds_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-right']//select
+	CSS -> #beds_min
+Choose "Distance from location" and choose "Within ¼ mile"-> 
+	XPATH -> //select[@id='radius']//option[text()="Within ¼ mile"]
+	XPATH -> //div[@id='search-radius-wrapper']//option[text()="Within ¼ mile"]
+	CSS -> #radius
+Choose in "Added" option "Last 3 days" -> 
+	XPATH -> //select[@id='added']//option[text()='Last 3 days']
+	XPATH -> //div[@id='search-li-added']//option[text()='Last 3 days']
+	CSS -> #added
+Choose sorting option "Sorted by" value "Highest price"-> XPATH ->
+	XPATH -> //select[@id='sort-order-dropdown']//option[text()='Highest price']
+	XPATH -> //div[@class='css-e8hwyq egjkayq4']//select//option[text()='Highest price']
+	CSS -> #sort-order-dropdown
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties of choosen conditions should appeared and sorted in descending order 
 
 Advance searching by location, boundary price, property tipe, number of bedrooms and sorting in ascending order
 10)
-Open browser -> 
-Go to the webpage www.zoopla.co.uk->
+Open a browser -> 
+Navigate to the webpage www.zoopla.co.uk->
 Tap "Advanced search options" ->
+	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
+  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+	CSS -> .search-input-location-placeholder-1
 Insert location in the location field -> 
+	XPATH -> //input[@class='geo_autocomplete_identifier']/span[text()='Please enter a location'] 
+  	XPATH -> //input[@class='geo_autocomplete_identifier']
+	CSS -> .search-input-location-placeholder-1
 Choose Minimum price in field "Min prise" ->
+	XPATH -> //select[@id='forsale_price_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
+	CSS -> #forsale_price_min
 Choose Maximum price in field "Max prise" ->
+	XPATH -> //select[@id='forsale_price_max']
+	XPATH -> //div[@class='search-attributes-col search-attributes-price-max search-attr-for-sale']//select
+	CSS -> #forsale_price_max
 Choose Property type in field "Property type" ->
+	XPATH -> //select[@id='property_type']
+	XPATH -> //div[@class='search-attributes-col']//select
+	CSS -> #property_type
 Choose number of bedrooms in field "Bedrooms" ->
-Choose "Distance from location" ->
+	XPATH -> //select[@id='beds_min']
+	XPATH -> //div[@class='search-attributes-col search-attributes-right']//select
+	CSS -> #beds_min
+Choose "Distance from location" and choose "Within ¼ mile"-> 
+	XPATH -> //select[@id='radius']//option[text()="Within ¼ mile"]
+	XPATH -> //div[@id='search-radius-wrapper']//option[text()="Within ¼ mile"]
+	CSS -> #radius, option
 Choose in "Added" option "Last 7 days" ->
+	XPATH -> //select[@id='added']//option[text()='Last 7 days']
+	XPATH -> //div[@id='search-li-added']//option[text()='Last 7 days']
+	CSS -> #added
 Choose sorting option "Sorted by" value "Lowest price" ->
-Push the button "Search"->
+	XPATH -> //select[@id='sort-order-dropdown']//option[text()='Lowest price']
+	XPATH -> //div[@class='css-e8hwyq egjkayq4']//select//option[text()='Lowest price']
+	CSS -> #sort-order-dropdown
+Push the button "Search"-> 
+	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
+	XPATH -> //button[@id='search-submit']
+	CSS -> #search-submit
 The information about the properties of choosen conditions should appeared and sorted in ascending order 

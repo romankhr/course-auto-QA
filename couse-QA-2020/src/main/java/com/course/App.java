@@ -1,4 +1,4 @@
-package com.course-qa2020;
+package com.course;
 
 /**
  * Hello world!

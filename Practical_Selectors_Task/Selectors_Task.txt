@@ -4,25 +4,26 @@ Searching by location
 1)
 Open a browser -> 
 Navigate to the webpage www.zoopla.co.uk->
-Insert location in the location field -> 
+Insert location "London" in the location field -> 
 	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
-  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+  	XPATH -> //input[@class='search-input geo_autocomplete']
 	CSS -> .search-input-location-placeholder-1
 Push the button "Search"-> 
 	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
 	XPATH -> //button[@id='search-submit']
 	CSS -> #search-submit
-The information about the properties of choosen location should appeared
+The information about the properties of chosen location and with minimum price should appeared
+ 	XPATH ->//h1[@class='css-mh5azd-Heading1 e1s8jdjv5']
 
 Searching by minimum price
 2)
 Open a browser -> 
 Navigate to the webpage www.zoopla.co.uk->
-Insert location in the location field -> 
+Insert location "London" in the location field -> 
 	XPATH -> //div[@id='search-input-location-wrapper']//child::span[@class='search-input-location-placeholder']
-  	XPATH -> //span[contains(text(),'e.g. Oxford, NW3 or Waterloo Station')]
+  	XPATH -> //input[@class='search-input geo_autocomplete']
 	CSS -> .search-input-location-placeholder-1
-Choose Minimum price in field "Min prise" ->
+Choose Minimum price '£40k min' in field "Min prise" ->
 	XPATH -> //select[@id='forsale_price_min']
 	XPATH -> //div[@class='search-attributes-col search-attributes-price-min search-attr-for-sale']//descendant::select
 	CSS -> #forsale_price_min
@@ -30,7 +31,9 @@ Push the button "Search"->
 	XPATH -> //div[@class='search-bottom clearfix']/div[@class='search-bottom-right right'] 
 	XPATH -> //button[@id='search-submit']
 	CSS -> #search-submit
-The information about the properties that have price bigger of choosen minimum should appeared
+The information about the properties that have price bigger of choosen minimum should appeared.
+The title should be '£40k min' 
+	XPATH ->//div[@class='css-ijwzpf-ButtonWrapper e1tnwg465']//p[contains(text(),'£40k min')]
 
 Searching by maximum price
 3)
