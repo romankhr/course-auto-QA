@@ -18,11 +18,11 @@ public class FirstWebTests extends BaseTest {
     private PropertyTypePage propertyTypePage;
     private  AdvanceSearchPage advanceSearchPage;
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void setupTest() {
         System.out.println(getClass().getSimpleName()+".setupTest");
 
-        driver.get("https://www.zoopla.co.uk");
+//        driver.get("https://www.zoopla.co.uk");
 
         if (driver.findElement(By.xpath(acceptCookiesButtonLocator)).isDisplayed()) {
             driver.findElement(By.xpath(acceptCookiesButtonLocator)).click();
@@ -30,7 +30,7 @@ public class FirstWebTests extends BaseTest {
         homePage = new HomePage(driver);
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
             driver.quit();
