@@ -12,7 +12,7 @@ public class LocationLondonPage extends Page{
         super(driver);
     }
 
-    public boolean isTitleCorrect(){
-        return driver.findElement(By.xpath(searchTermLocatorLocation)).getText().equals(LOCATION_PAGE_TITLE_LOCATION);
+    public boolean isTitleCorrect(String searchTerm){
+        return driver.findElement(By.xpath(searchTermLocatorLocation)).getText().toLowerCase().contains(searchTerm.toLowerCase());
     }
 }

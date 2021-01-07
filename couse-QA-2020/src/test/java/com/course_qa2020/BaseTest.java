@@ -37,7 +37,7 @@ public abstract class BaseTest {
             System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
         }
         driver = new ChromeDriver();
-      driver.manage().window().maximize();
+        driver.manage().window().maximize();
         driver.get(getMainUrl());
         System.out.println("----->"+getMainUrl().toString());
 
@@ -47,9 +47,9 @@ public abstract class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
         System.out.println("teardown");
     }
 
