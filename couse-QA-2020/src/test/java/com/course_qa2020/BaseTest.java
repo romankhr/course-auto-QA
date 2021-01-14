@@ -39,8 +39,9 @@ public abstract class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(getMainUrl());
+        //TODO don't need to use toString() as method returns String already
         System.out.println("----->"+getMainUrl().toString());
-
+    //TODO please remove empty lines
 
 
     }
