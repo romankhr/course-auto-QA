@@ -16,6 +16,7 @@ public class HomePageTest {
 
     @BeforeMethod
     public void setup() {
+        //TODO why we can't use this in the BaseTest?
         driver.get("https://www.zoopla.co.uk");
 
         if (driver.findElement(By.xpath(acceptCookiesButtonLocator)).isDisplayed()) {
@@ -24,12 +25,14 @@ public class HomePageTest {
         homePage = new HomePage(driver);
     }
 
+    //TODO this shoul;d be in the BaseTest
     @AfterMethod
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
     }
+    //TODO please remove if doesn't required
 //    @Test(priority = 0, suiteName = "main")
 //    public void mainUrlTest() {
 //
