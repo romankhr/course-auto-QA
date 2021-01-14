@@ -11,14 +11,14 @@ import java.util.Comparator;
 import java.util.List;
 
 public class SortedPage extends Page {
-
+    //TODO please make it private & remove empty line
     public String resultsListLocator = "//p[@class='css-18tfumg-Text eczcs4p0']";
 
 
     public SortedPage(RemoteWebDriver driver) {
         super(driver);
     }
-
+    //TODO method should be renamed & overall can we make it less complex? or split into few methods to decrease complexity?
     public boolean isSortedPageSorted() {
         List<Integer> results = new ArrayList<>();
         List<Integer> expectedResults = new ArrayList<>();
