@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class HomePage extends Page {
-
+    //TODO please be consistent with the naming and either add Locator at the end to all of them or to none
     protected RemoteWebDriver driver;
     private String searchFindByLocationLocator="//input[@class='search-input geo_autocomplete']";
     private String searchButtonLocator="//button[@id='search-submit']";
@@ -22,7 +22,7 @@ public class HomePage extends Page {
         super(driver);
         this.driver=driver;
     }
-
+   //TODO please fix identation
         public HomePage setSearchLocationTerm(String searchTerm){
             driver.findElement(By.xpath(searchFindByLocationLocator)).sendKeys(searchTerm);
             return this;
