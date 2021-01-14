@@ -11,6 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class FirstWebTests extends BaseTest {
+    //TODO please exctract this variable and reuse
     private String acceptCookiesButtonLocator = "//button[@class=\"ui-button-primary ui-cookie-accept-all-medium-large\"]";
     private String searchTerm="London";
     private HomePage homePage;
@@ -23,9 +24,9 @@ public class FirstWebTests extends BaseTest {
     @BeforeMethod (alwaysRun = true)
     public void setupTest() {
         System.out.println(getClass().getSimpleName()+".setupTest");
-
+//TODO do we need this line here?
 //        driver.get("https://www.zoopla.co.uk");
-
+        //TODO can this be placed in the BaseTest?
         if (driver.findElement(By.xpath(acceptCookiesButtonLocator)).isDisplayed()) {
             driver.findElement(By.xpath(acceptCookiesButtonLocator)).click();
         }
@@ -36,7 +37,7 @@ public class FirstWebTests extends BaseTest {
     public Object[][] getSearchTerms() {
         return SearchTermsDataProvider.getAllSearchTerms();
     }
-
+//TODO do we need it here?
 //    @AfterMethod (alwaysRun = true)
 //    public void tearDown() {
 //        if (driver != null) {
@@ -45,7 +46,7 @@ public class FirstWebTests extends BaseTest {
 //    }
 
 //   -----------------------------Test 1-----------------------------
-
+//TODO please apply correct identation to the whole class
     @Test(groups = "main", dataProvider = "getSearchTerms")
     public void locationTest(String searchTerm) throws Exception {
         locationLondonPage=new LocationLondonPage(driver);
