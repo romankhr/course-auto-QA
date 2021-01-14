@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SortedPageTests extends BaseTest {
+    //TODO as this is used across different test shall we extract it to the Properties or BaseTest?
     private String acceptCookiesButtonLocator = "//button[@class=\"ui-button-primary ui-cookie-accept-all-medium-large\"]";
     private String searchTerm = "London";
     private HomePage homePage;
@@ -28,7 +29,7 @@ public class SortedPageTests extends BaseTest {
         }
         homePage = new HomePage(driver);
     }
-
+    //TODO sahll be in the BaseTest
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
