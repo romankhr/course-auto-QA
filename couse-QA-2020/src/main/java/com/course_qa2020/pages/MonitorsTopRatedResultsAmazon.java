@@ -13,7 +13,8 @@ import java.util.concurrent.TimeUnit;
 public class MonitorsTopRatedResultsAmazon extends Page {
     private String averageSortingLocator = "//a[text()='Avg. Customer Review']";
     private String ratingLocator = "//div[@class='s-include-content-margin s-border-bottom s-latency-cf-section']//span[@class='a-size-base']";
-    private String focusRatingLocator="//span[@id='a-autoid-0']";
+    private String focusRatingLocator = "//span[@id='a-autoid-0']";
+
     public MonitorsTopRatedResultsAmazon(RemoteWebDriver driver) {
         super(driver);
     }
@@ -36,10 +37,8 @@ public class MonitorsTopRatedResultsAmazon extends Page {
         for (WebElement element : getElements(By.xpath(ratingLocator))) {
             String price = element.getText().replaceAll("[^\\d]", "");
             System.out.println(price);
-
             if (price.isEmpty())
                 continue;
-
             results.add(Integer.parseInt(price));
             expectedResults.add(Integer.parseInt(price));
             Collections.sort(expectedResults, new Comparator<Integer>() {
