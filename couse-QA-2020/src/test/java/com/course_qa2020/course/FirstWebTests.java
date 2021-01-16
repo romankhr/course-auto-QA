@@ -121,7 +121,8 @@ public class FirstWebTests extends BaseTest {
                 .setPropertyType()
                 .setMinPrice()
                 .setSearchLocationTerm(searchTerm)
-                .setMaxPrice().setSearchByBedrooms()
+                .setMaxPrice()
+                .setSearchByBedrooms()
                 .setSortOptions()
                 .setSearchRadius()
                 .clickOnSearchButton(AdvanceSearchPage.class);

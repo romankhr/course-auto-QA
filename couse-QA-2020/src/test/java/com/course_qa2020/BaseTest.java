@@ -3,6 +3,7 @@ package com.course_qa2020;
 import com.course_qa2020.listeners.TestListener;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -23,6 +24,7 @@ public abstract class BaseTest {
     private static final String DEFAULT_ENV_REMOTE_PROPERTIES_FILE_PATH = "src/test/resources/remote.properties";
     protected RemoteWebDriver driver = null;
     private static Properties properties;
+    protected WebDriverWait wait;
 
     static {
         properties = new Properties();
@@ -37,13 +39,10 @@ public abstract class BaseTest {
             System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
         }
         driver = new ChromeDriver();
+        this.wait = new WebDriverWait(driver, 30);
         driver.manage().window().maximize();
         driver.get(getMainUrl());
-        //TODO don't need to use toString() as method returns String already
         System.out.println("----->"+getMainUrl().toString());
-    //TODO please remove empty lines
-
-
     }
 
     @AfterMethod(alwaysRun = true)
