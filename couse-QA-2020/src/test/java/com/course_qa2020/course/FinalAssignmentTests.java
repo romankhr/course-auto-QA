@@ -68,16 +68,16 @@ public class FinalAssignmentTests extends BaseTest {
 
         //Given user navigates to the webpage www.amazon.co.uk
 
-        //when from the home page click on link “New Releases” from the Top menu
-        // and from the “Hot New Releases” click on “Most Gifted” link from the top menu
-        // and from the “Amazon Gift Ideas” click on “Books” link from the left menu
+        //when from the home page search for “go pro 4k” via search field
+        // and on the “Search results” page select Avg. Customer Review 4+ stars from the left section
+        // and on the “Search results” page set min price as 100 and apply changes
         searchPage = homePage
                 .insertSearchTerm(SEARCH_TERM)
                 .navigateSearchPage(SearchPageAmazon.class)
                 .setCustomerReview()
                 .setMinPrice(MIN_PRICE)
                 .goButton(MIN_PRICE);
-        //Then on the “Most Gifted in Books” page check ALL listings and verify that all of them have Ratings presented
+        //Thenverify that all updated results (except Limited deals one) have an average rating 4+ and item price is higher than 100
         Assert.assertTrue(searchPage.isResultCorrect(MIN_PRICE), "The result is less than 100!!!");
     }
 
@@ -89,9 +89,10 @@ public class FinalAssignmentTests extends BaseTest {
 
         //Given user navigates to the webpage www.amazon.co.uk
 
-        //when from the home page click on link “New Releases” from the Top menu
-        // and from the “Hot New Releases” click on “Most Gifted” link from the top menu
-        // and from the “Amazon Gift Ideas” click on “Books” link from the left menu
+        //when from the home page click on link “Electronics” from the Top menu
+        // and on “Computers & Accessories” page click on “Monitors”
+        // and on “Monitors” page click on “See more” link next to the “Top rated section”
+        // and on  “Monitors top rated results” page apply filter “Sort by: Avg. Customer Review” from the top of the page
         monitorsTopRatedResultsAmazon = homePage
                 .navigateElectronicsPage(ElectronicsPageAmazon.class)
                 .navigateComputersAndAccessories(ComputerAndAccessoriesPageAmazon.class)
@@ -99,7 +100,7 @@ public class FinalAssignmentTests extends BaseTest {
                 .navigateMonitorListPage(MonitorsTopRatedResultsAmazon.class)
                 .focusingOnRating()
                 .averageSorting();
-        //Then on the “Most Gifted in Books” page check ALL listings and verify that all of them have Ratings presented
+        //Then verify that in refreshed list all listings on the first page are sorted according to the Customer review
         Assert.assertTrue(monitorsTopRatedResultsAmazon.isSortedPageSorted(), "The sorting is not correct!!!");
     }
 
@@ -111,15 +112,16 @@ public class FinalAssignmentTests extends BaseTest {
 
         //Given user navigates to the webpage www.amazon.co.uk
 
-        //when from the home page click on link “New Releases” from the Top menu
-        // and from the “Hot New Releases” click on “Most Gifted” link from the top menu
-        // and from the “Amazon Gift Ideas” click on “Books” link from the left menu
+        //when from the home page click on link “Electronics” from the Top menu
+        // and on “Computers & Accessories” page click on “Tablets”
+        // on Results page select “Prime” option checkbox from the left menu
+
         tabletsPageAmazon = homePage
                 .navigateElectronicsPage(ElectronicsPageAmazon.class)
                 .navigateComputersAndAccessories(ComputerAndAccessoriesPageAmazon.class)
                 .navigateTabletsPage(TabletsPageAmazon.class)
                 .setCheckBox();
-        //Then on the “Most Gifted in Books” page check ALL listings and verify that all of them have Ratings presented
+        //Thenin result list verify that all listings on the first page either have “Prime option” or “FREE Delivery” in the listing body
         Assert.assertTrue(tabletsPageAmazon.isResultListCorrect(), " The first page have not “Prime option” or “FREE Delivery” in the listing body!!!");
     }
 }
